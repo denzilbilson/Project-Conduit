@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  background: radial-gradient(#003365 70%, #001D3B);
+}
+
+h1 {
+  font-size: 3rem;
+  color: #35ccff;
+}
+#gameCanvas {
+  border: solid 30px #35ccff;
+  background-color: green;
+}
+
+#container {
+    margin-top: 1rem
+}

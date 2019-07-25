@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
+        <title>PONG
         </title>
+        <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="icon" type="image/png" href="img/favico.png" />
     </head>
 
     <body>
-        <canvas id = "gameCanvas" height = "600" width = "800"></canvas>
+      <div id="container">
+        <h1>PONG</h1>
+        <canvas id="gameCanvas" height = "600" width = "800"></canvas>
         <script>
             //canvas variables
             var canvas;
@@ -106,18 +111,18 @@
 
             function draw() {
                 //main background canvas
-                createRect(0,0,canvas.width,canvas.height, 'black');
+                createRect(0,0,canvas.width,canvas.height, '#003365');
 
                 //this is the left player's paddle
-                createRect(paddle1X, paddle1Y, PADDLE_WIDTH, PADDLE_HEIGHT, 'white');
+                createRect(paddle1X, paddle1Y, PADDLE_WIDTH, PADDLE_HEIGHT, '#35ccff');
 
                 //this is the paddle for the right player
-                createRect(paddle2X, paddle2Y, PADDLE_WIDTH, PADDLE_HEIGHT, 'white');
+                createRect(paddle2X, paddle2Y, PADDLE_WIDTH, PADDLE_HEIGHT, '#35ccff');
 
                 //ball
-                createRect(ballX, ballY, 10, 10, 'white');
-                canvasContext.fillStyle = 'white';
-                canvasContext.font = "50px Georgia"
+                createRect(ballX, ballY, 10, 10, '#35ccff');
+                canvasContext.fillStyle = '#35ccff';
+                canvasContext.font = "70px Audiowide"
                 canvasContext.fillText(player1Score, 100, 100);
                 canvasContext.fillText(player2Score, 700, 100)
             }
@@ -134,5 +139,6 @@
 
 
         </script>
+      </div>
     </body>
 </html>
