@@ -11,6 +11,7 @@ jinja_env=jinja2.Environment(
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write("hello")
+        template=jinja_env.get_template("paddle.html")
+        self.response.write(template.render())
 
-app=webapp2.WSGIApplication([('/', MainPage), debug=True])
+app=webapp2.WSGIApplication([('/', MainPage)], debug=True)
